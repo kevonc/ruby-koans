@@ -117,13 +117,13 @@ EOS
   def test_single_quotes_sometimes_interpret_escape_characters
     string = '\\\''
     assert_equal 2, string.size
-    assert_equal "\\'", string
+    assert_equal "\\'", string #not making sense
   end
 
   def test_double_quoted_strings_interpolate_variables
     value = 123
     string = "The value is #{value}"
-    assert_equal __, string
+    assert_equal "The value is 123", string
   end
 
   def test_single_quoted_strings_do_not_interpolate
