@@ -50,14 +50,14 @@ It was the worst of times.
 It was the best of times,
 It was the worst of times.
 EOS
-    assert_equal 53, long_string.length
+    assert_equal 53, long_string.length # What is EOS?
     assert_equal 2, long_string.lines.count
     assert_equal "I", long_string[0,1]
   end
 
   def test_plus_will_concatenate_two_strings
     string = "Hello, " + "World"
-    assert_equal __, string
+    assert_equal "Hello, World", string
   end
 
   def test_plus_concatenation_will_leave_the_original_strings_unmodified
